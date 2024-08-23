@@ -8,14 +8,14 @@ export const addTask = (task) => {
         text: task,
         completed: false,
     };
-    task.push(newTask);
-    localStorage.setItem("tasks", JSON.stringify(task));
+    tasks.push(newTask);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
 // Funcion para eliminar una tarea
 export const deleteTask = (id) => {
     tasks = tasks.filter((task) => task.id !== parseInt(id));
-    localStorage.setItem("tasks", JSON.stringify(task));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
 // Funcion para actualizar la tarea

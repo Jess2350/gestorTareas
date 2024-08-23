@@ -1,14 +1,14 @@
 import "./styles.css";
-import { addTask, deleteTsk, toggleTask } from "./task";
+import { addTask, deleteTask, toggleTask } from "./task";
 import { renderTasks } from "./ui";
 
 document.addEventListener("DOMContentLoaded", () => {
     renderTasks();
 
-    document.getElementsById("task-form").addEventListener("submit", (e) => {
+    document.getElementById("task-form").addEventListener("submit", (e) => {
         e.preventDefault();
 
-        const taskInput = document.getElementsById("task-input").value;
+        const taskInput = document.getElementById("task-input").value;
         if(taskInput !== "") {
             addTask(taskInput);
             renderTasks();

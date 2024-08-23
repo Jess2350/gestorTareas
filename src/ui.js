@@ -2,7 +2,7 @@ import { getTasks } from "./task";
 
 // Funcion para mostrarle al usuario las tareas
 export const renderTasks = () => {
-    const taskList = document.getElementsById("task-list");
+    const taskList = document.getElementById("task-list");
     taskList.innerHTML = "";
     const tasks = getTasks();
     tasks.forEach((task) => {

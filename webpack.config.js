@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js', //Punto de entrada
     output: {
        filename: 'bundle.js', // Nombre del archivo de salida 
-       path: path. path.resolve(__dirname, 'dist'), // Carpeta de salida
+       path: path.resolve(__dirname, 'dist'), // Carpeta de salida
     }, 
     module: {
        rules: [
@@ -19,7 +19,7 @@ module.exports = {
               use: {
                   loader: 'babel-loader', // Loader para pasar JS moderno a Js mas antiguo para todos los navegadores
                   options: {
-                      presents: ['@babel/preset-env'],
+                      presets: ['@babel/preset-env'],
                   },
               },
           },
